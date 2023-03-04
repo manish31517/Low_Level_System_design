@@ -1,4 +1,4 @@
-package WithoutSrategyPattern;
+package WithoutStrategyPattern;
 
 public class OffRoadVehicle extends Vehicle{
     @Override
