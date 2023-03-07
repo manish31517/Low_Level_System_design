@@ -8,7 +8,7 @@ import ObserverDesingPattern.Observer.PhoneNotificationObserver;
 
 public class Store {
 
-    public static  void Main(String [] args){
+    public static  void main(String [] args){
         StockObservable iphoneObservableimpl= new IphoneObservableimpl();
 
         NotificationAlertObserver email1 = new EmailNotificationObserver("xzy@gmail.com",iphoneObservableimpl);
