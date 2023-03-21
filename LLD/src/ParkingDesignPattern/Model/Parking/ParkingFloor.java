@@ -2,6 +2,7 @@ package ParkingDesignPattern.Model.Parking;
 
 import ParkingDesignPattern.Model.Gate.EntranceGate;
 import ParkingDesignPattern.Model.Gate.ExistenceGate;
+import ParkingDesignPattern.Model.Parking.Person.Person;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class ParkingFloor {
     List<EntranceGate> entranceGates;
     List<ExistenceGate> existenceGates;
 
-    public ParkingFloor(int floorNo, List<ParkingSpot> parkingSpotList, List<Person> gaurd, List<EntranceGate> entranceGates, List<ExistenceGate> ExistenceGates) {
+    public ParkingFloor(int floorNo, List<ParkingSpot> parkingSpotList, List<Person> gaurd, List<EntranceGate> entranceGates, List<ExistenceGate> existenceGates) {
         this.floorNo = floorNo;
         this.parkingSpotList = parkingSpotList;
         this.gaurd = gaurd;
