@@ -44,4 +44,14 @@ public abstract class Person {
     public void setEmailId(String emailId) {
         this.emailId = emailId;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", address='" + address + '\'' +
+                ", emailId='" + emailId + '\'' +
+                '}';
+    }
 }
