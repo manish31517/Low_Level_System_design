@@ -1,4 +1,4 @@
-package ParkingDesignPattern.Model.Parking.Person;
+package ParkingDesignPattern.Model.Person;
 
 public abstract class Person {
     private String name;

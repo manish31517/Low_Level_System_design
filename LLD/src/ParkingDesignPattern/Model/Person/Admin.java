@@ -1,4 +1,4 @@
-package ParkingDesignPattern.Model.Parking.Person;
+package ParkingDesignPattern.Model.Person;
 
 import ParkingDesignPattern.Model.Parking.ParkingFloor;
 

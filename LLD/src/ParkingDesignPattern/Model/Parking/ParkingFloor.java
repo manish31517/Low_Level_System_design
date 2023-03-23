@@ -2,7 +2,7 @@ package ParkingDesignPattern.Model.Parking;
 
 import ParkingDesignPattern.Model.Gate.EntranceGate;
 import ParkingDesignPattern.Model.Gate.ExistenceGate;
-import ParkingDesignPattern.Model.Parking.Person.Person;
+import ParkingDesignPattern.Model.Person.Person;
 
 import java.util.List;
 

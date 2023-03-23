@@ -1,8 +1,8 @@
-package ParkingDesignPattern.Model.Parking.Person;
+package ParkingDesignPattern.Model.Person;
 
-public abstract  class  Staff extends Person{
+public abstract  class Gaurd extends Person{
     private  int parkingFloorNumber;
-    public  Staff(String name, String age, String address, String emailId){
+    public  Gaurd(String name, String age, String address, String emailId){
         super(name,age,address,emailId);
     }
 
