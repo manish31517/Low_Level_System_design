@@ -1,7 +1,7 @@
 package ParkingDesignPattern.Services;
 
+import ParkingDesignPattern.Model.Ticket.Ticket;
 import ParkingDesignPattern.Model.Vehicle.Vehicle;
-import sun.security.krb5.internal.Ticket;
 
 public interface IBookParkingService {
 

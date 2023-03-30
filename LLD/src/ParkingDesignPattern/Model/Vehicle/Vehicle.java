@@ -1,11 +1,13 @@
 package ParkingDesignPattern.Model.Vehicle;
 
+import ParkingDesignPattern.Model.Person.Person;
+
 public class Vehicle {
     VehicleCategoryWithCost vehicleCategoryWithCost;
     String vehicleNumber;
-    String vehicleOwner;
+    Person vehicleOwner;
 
-    public Vehicle(VehicleCategoryWithCost vehicleCategoryWithCost, String vehicleNumber, String vehicleOwner) {
+    public Vehicle(VehicleCategoryWithCost vehicleCategoryWithCost, String vehicleNumber,Person  vehicleOwner) {
         this.vehicleCategoryWithCost = vehicleCategoryWithCost;
         this.vehicleNumber = vehicleNumber;
         this.vehicleOwner = vehicleOwner;
@@ -27,11 +29,11 @@ public class Vehicle {
         this.vehicleNumber = vehicleNumber;
     }
 
-    public String getvehicleOwner() {
+    public Person getvehicleOwner() {
         return vehicleOwner;
     }
 
-    public void setvehicleOwner(String vehicleOwner) {
+    public void setvehicleOwner(Person vehicleOwner) {
         this.vehicleOwner = vehicleOwner;
     }
 

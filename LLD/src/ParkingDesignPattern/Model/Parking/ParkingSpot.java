@@ -9,10 +9,9 @@ public class ParkingSpot {
     private boolean isSpackeAvailableForParking;
     private VehicleCategoryWithCost vehicleCategoryWithCost;
 
-    public ParkingSpot(int spotNumber, Vehicle vehicle, boolean isSpackeAvailableForParking, VehicleCategoryWithCost vehicleCategoryWithCost) {
+    public ParkingSpot(int spotNumber, boolean isSpackeAvailableForParking, VehicleCategoryWithCost vehicleCategoryWithCost) {
         this.spotNumber = spotNumber;
-        this.vehicle = vehicle;
-        this.isSpackeAvailableForParking = isSpackeAvailableForParking;
+         this.isSpackeAvailableForParking = isSpackeAvailableForParking;
         this.vehicleCategoryWithCost = vehicleCategoryWithCost;
     }
 
@@ -20,7 +19,7 @@ public class ParkingSpot {
         return spotNumber;
     }
 
-    void freeTheParkingSpace(){
+   public   void freeTheParkingSpace(){
         vehicle=null;
         isSpackeAvailableForParking=true;
     }

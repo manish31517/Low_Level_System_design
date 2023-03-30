@@ -2,14 +2,14 @@ package ParkingDesignPattern.Model.Gate;
 
 public abstract class Gate {
    private int assignedFloorNo;
-   private int getNumber;
+   private int gateNumber;
    private boolean isOpened;
 
    private  boolean isClosed;
 
     public Gate(int assignedFloorNo, int getNumber, boolean isOpened, boolean isClosed) {
         this.assignedFloorNo = assignedFloorNo;
-        this.getNumber = getNumber;
+        this.gateNumber = gateNumber;
         this.isOpened = isOpened;
         this.isClosed = isClosed;
     }
@@ -22,12 +22,12 @@ public abstract class Gate {
         this.assignedFloorNo = assignedFloorNo;
     }
 
-    public int getGetNumber() {
-        return getNumber;
+    public int getGateNumber() {
+        return gateNumber;
     }
 
-    public void setGetNumber(int getNumber) {
-        this.getNumber = getNumber;
+    public void setGateNumber(int gateNumber) {
+        this.gateNumber = gateNumber;
     }
 
     public boolean isOpened() {
@@ -50,7 +50,7 @@ public abstract class Gate {
     public String toString() {
         return "Gate{" +
                 "assignedFloorNo=" + assignedFloorNo +
-                ", getNumber=" + getNumber +
+                ", getNumber=" + gateNumber +
                 ", isOpened=" + isOpened +
                 ", isClosed=" + isClosed +
                 '}';

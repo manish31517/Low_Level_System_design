@@ -1,7 +1,9 @@
 package ParkingDesignPattern.Model.Vehicle;
 
+import ParkingDesignPattern.Model.Person.VehicleOwner;
+
 public class TwoWheelerVehicle extends Vehicle{
-     public TwoWheelerVehicle(String vehicleOwner, String vehicleNumber){
+     public TwoWheelerVehicle(VehicleOwner vehicleOwner, String vehicleNumber){
          super(VehicleCategoryWithCost.TwoWheeler,vehicleNumber,vehicleOwner);
      }
 
