@@ -1,2 +1,4 @@
-package ProxyDesingPattern;public class Employee {
+package ProxyDesingPattern;
+
+public class Employee {
 }
