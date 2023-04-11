@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ThreaterController {
+public class TheaterController {
     Map<City, List<Theater>> cityVSTheater;
     List<Theater> theaters;
 
-    public ThreaterController(){
+    public TheaterController(){
         cityVSTheater = new HashMap<>();
         theaters = new ArrayList<>();
     }
