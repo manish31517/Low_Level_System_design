@@ -5,6 +5,7 @@ import MovieBookingSystem.Enum.SeatCategory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BookMyShow {
     MovieController movieController;
@@ -19,8 +20,41 @@ public class BookMyShow {
 
         BookMyShow bookMyShow = new BookMyShow();
         bookMyShow.intialize();
+
+        bookMyShow.createBooking(City.BANGALORE,"Bahubali");
+        bookMyShow.createBooking(City.DELHI,"Dabang");
     }
 
+    public void createBooking(City city, String movie) {
+        // 1. Seacrh movie by location
+        List<Movie> movies = movieController.getMoviesByCity(city);
+
+        if (movies == null) {
+            System.out.println("!!!Sorry, Movies is not screening in your city.!!!");
+            return;
+        }
+
+        // 2. select the movie  which you want to see,
+        Movie movieInterested = null;
+        for (Movie movie1 : movies) {
+            if (movie1.getName().equals(movie)) {
+                movieInterested = movie1;
+            }
+        }
+
+        //3. get all show of this movie in particular location
+
+        Map<Theater, List<Show>> showTheaterWise = theaterController.getAllShow(movieInterested, city);
+
+        //4. select particualr show use is intereseted in
+        Map.Entry<Theater, List<Show>> entry = showTheaterWise.entrySet().iterator().next();
+        List<Show> runningShow = entry.getValue();
+        Show show = runningShow.get(0);
+
+        //5.  select the seat
+        
+
+    }
     public  void createMovie(){
         Movie bahubali = new Movie(1,"Bahubali",190);
         Movie dabang = new Movie(2,"Dabang",150);
