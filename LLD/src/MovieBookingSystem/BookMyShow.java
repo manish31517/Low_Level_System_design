@@ -39,21 +39,39 @@ public class BookMyShow {
         for (Movie movie1 : movies) {
             if (movie1.getName().equals(movie)) {
                 movieInterested = movie1;
+                break;
             }
         }
 
         //3. get all show of this movie in particular location
-
+        System.out.println(movieInterested.getName());
         Map<Theater, List<Show>> showTheaterWise = theaterController.getAllShow(movieInterested, city);
 
         //4. select particualr show use is intereseted in
         Map.Entry<Theater, List<Show>> entry = showTheaterWise.entrySet().iterator().next();
         List<Show> runningShow = entry.getValue();
-        Show show = runningShow.get(0);
+        Show intersetedShow = runningShow.get(0);
 
         //5.  select the seat
-        
+         int seatNumber = 30;
+         List<Integer> bookedSeats = intersetedShow.getBookedSeatIDs();
+         if(!bookedSeats.contains(seatNumber)){
+             Booking booking = new Booking();
+             bookedSeats.add(seatNumber);
+             List<Seat> myBookedSeats = new ArrayList<>();
+             for(Seat screenSeat : intersetedShow.getScreen().getSeatList()){
+                 if(screenSeat.getSeatID() == seatNumber){
+                     myBookedSeats.add(screenSeat);
+                 }
+             }
+             booking.setSeat(myBookedSeats);
+             booking.setShow(intersetedShow);
+         }else {
+             System.out.println("Seat already booked, try again");
+             return;
+         }
 
+        System.out.println("Booking Successfully");
     }
     public  void createMovie(){
         Movie bahubali = new Movie(1,"Bahubali",190);
@@ -66,8 +84,8 @@ public class BookMyShow {
     }
 
     public  void createTheater(){
-        Movie dabang = movieController.getMovieByName("dabang");
-        Movie bahubali = movieController.getMovieByName("bahubali");
+        Movie dabang = movieController.getMovieByName("Dabang");
+        Movie bahubali = movieController.getMovieByName("Bahubali");
 
         Theater cinepolls = new Theater();
         cinepolls.setTheaterID(1);
@@ -140,7 +158,7 @@ public class BookMyShow {
 
     public Show creatShow(int showId, Screen screen, Movie movie, int showStartTime){
         Show show = new Show();
-        show.setShowID(1);
+        show.setShowID(showId);
         show.setStartTime(showStartTime);
         show.setMovie(movie);
         show.setScreen(screen);

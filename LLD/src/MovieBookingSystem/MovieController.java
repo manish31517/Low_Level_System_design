@@ -25,7 +25,7 @@ public class MovieController {
 
     Movie getMovieByName(String movieName){
         for(Movie movie : movies){
-            if(movieName.equals(movie)){
+            if(movieName.equals(movie.getName())){
                 return movie;
             }
         }

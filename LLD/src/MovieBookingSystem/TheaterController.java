@@ -31,7 +31,7 @@ public class TheaterController {
                List<Show> givenMoveShows = new ArrayList<>();
 
                for (Show show : shows) {
-                   if (show.movie.getMovieID() == movie.getMovieID()) {
+                   if (show.getMovie().getMovieID() == movie.getMovieID()) {
                        givenMoveShows.add(show);
                    }
                    theaterVSShow.put(theater, givenMoveShows);
