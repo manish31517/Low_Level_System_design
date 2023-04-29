@@ -2,7 +2,6 @@ package ATMDesign;
 
 public class User {
     Card card;
-    UserBankAccount bankAccount;
     public Card getCard(){
         return  card;
     }

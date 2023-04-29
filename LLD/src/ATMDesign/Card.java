@@ -4,7 +4,7 @@ public class Card {
     private int cardNumber;
     private int cvv;
     private int expiryDate;
-    static int PIN_NUMBER = 1122211;
+    static int PIN_NUMBER = 112211;
 
     private UserBankAccount userBankAccount;
 
