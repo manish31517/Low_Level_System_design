@@ -47,7 +47,7 @@ public class BalanceSheetController {
                     userPaidBalance = new Balance();
                     oweUserExpneseSheet.getUserVsBalance().put(paidByUser.getUserId(), userPaidBalance);
                 }
-                userPaidBalance.setAmountGetBack(userPaidBalance.getAmoutOwe()  + oweAmount);
+                userPaidBalance.setAmoutOwe(userPaidBalance.getAmoutOwe()  + oweAmount);
 
             }
         }
@@ -69,7 +69,7 @@ public class BalanceSheetController {
         for(Map.Entry<String, Balance> entry : userExpenseBalanceSheet1.getUserVsBalance().entrySet()){
             String userId = entry.getKey();
             Balance balance = entry.getValue();
-            System.out.println("userID: "+ userId + "YouGetBack: "+ balance.getAmountGetBack()+ "YouOwe: "+balance.getAmoutOwe());
+            System.out.println("userID: "+ userId + " YouGetBack: "+ balance.getAmountGetBack()+ " YouOwe: "+balance.getAmoutOwe());
         }
         System.out.println("--------------------------------------------------------------------------------");
 
